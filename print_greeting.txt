@@ -1,0 +1,7 @@
+Add-Type -TypeDefinition @"
+using System.Windows.Forms;
+public class MsgBox {
+    public static void Show(string text) { MessageBox.Show(text, "Greeting", 0); }
+}
+"@ -Language CSharp
+[MsgBox]::Show("Hello World")
